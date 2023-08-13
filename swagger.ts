@@ -3,9 +3,9 @@ import swaggerJSDoc from 'swagger-jsdoc';
 const swaggerDefinition = {
   openapi: '3.0.0',
   info: {
-    title: 'Your API',
+    title: 'campaign API',
     version: '1.0.0',
-    description: 'API documentation for your application',
+    description: 'API documentation for campaign application',
   },
   servers: [{ url: 'http://localhost:3000' }], // Update with your server URL
 };

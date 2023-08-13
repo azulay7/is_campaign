@@ -1,0 +1,45 @@
+openapi: 3.0.0
+info:
+  title: Campaign Management API
+  version: 1.0.0
+paths:
+  /campaigns:
+    get:
+      x-swagger-router-controller: campaignRoute
+      operartionId: getCampaigns
+      summary: Get a list of campaigns
+      responses:
+        '200':
+          description: List of campaigns
+  /campaigns/{id}:
+    get:
+      summary: Get a campaign by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: Campaign ID
+      responses:
+        '200':
+          description: Campaign details
+  /campaign:
+    post:
+      summary: Save a new campaign
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                startDate:
+                  type: string
+                bid:
+                  type: number
+      responses:
+        '200':
+          description: New campaign details
